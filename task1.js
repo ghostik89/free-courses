@@ -8,9 +8,11 @@ function func(a, z) {
         return b * b;
     }
 }
+var n = Number(process. argv[2]);
+var e = Number(process.argv[3]);
+var sum = 0;
 
-var n = Number(process. argv[3]);
-var e = Number(process.argv[2]);
-var sum = (e * (func(e,n) - 1))/(e - 1);
+for(var i = 1; i <= n; i++)
+    sum += func(i,e);
 
 console.log(sum);
