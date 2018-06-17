@@ -4,8 +4,8 @@ var hours, minutes;
 if(result > 3600) {
     hours = Math.round(result / 3600);
     result -= hours * 3600;
-    if(hours == 1) console.log("1 час");
-    else if (hours >= 2 && hours <= 4) console.log(hours + " часа ");
+    if(hours % 10 == 1) console.log(hours + " час");
+    else if (hours % 10 >= 2 && hours % 10 <= 4) console.log(hours + " часа ");
     else console.log(hours + " Часов ");
 }
 if (result > 60){
